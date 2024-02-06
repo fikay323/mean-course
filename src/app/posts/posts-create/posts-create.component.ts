@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-posts-create',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './posts-create.component.css'
 })
 export class PostsCreateComponent {
+  inputContent: string = ''
+  inputTitle: string = ''
+
+  onAdddPost() {
+    const post = {
+      title: this.inputTitle,
+      content: this.inputContent
+    }
+  }
 
 }

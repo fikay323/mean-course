@@ -1,1 +1,9 @@
-<p>posts-create works!</p>
+<mat-card>
+    <mat-form-field>
+        <input matInput [(ngModel)]="inputTitle" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput rows="6" [(ngModel)]="inputContent" spellcheck="false"></textarea>
+    </mat-form-field>
+    <button color="accent" mat-raised-button (click)="onAdddPost()">Save Post</button>
+</mat-card>
